@@ -32,10 +32,10 @@ read VPN_IPSEC_PSK
 echo
 echo
 
-touch vpn.env
-echo "VPN_USER=$VPN_USER" > vpn.env
-echo "VPN_PASSWORD=$VPN_PASSWORD" >> vpn.env
-echo "VPN_IPSEC_PSK=$VPN_IPSEC_PSK" >> vpn.env
+touch /tmp/vpn.env
+echo "VPN_USER=$VPN_USER" > /tmp/vpn.env
+echo "VPN_PASSWORD=$VPN_PASSWORD" >> /tmp/vpn.env
+echo "VPN_IPSEC_PSK=$VPN_IPSEC_PSK" >> /tmp/vpn.env
 
 
 sudo modprobe af_key
@@ -46,7 +46,7 @@ docker pull hwdsl2/ipsec-vpn-server
 # start container
 docker run \
     --name ipsec-vpn-server \
-    --env-file ./vpn.env \
+    --env-file /tmp/vpn.env \
     --restart=always \
     -p 500:500/udp \
     -p 4500:4500/udp \
