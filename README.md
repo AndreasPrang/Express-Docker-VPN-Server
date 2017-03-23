@@ -5,7 +5,7 @@ Requires Debian Jessie, __or__ Docker to be installed
 
 ```
 root@localhost:~# wget https://raw.githubusercontent.com/AndreasPrang/Express-Docker-VPN-Server/master/startVPN.sh
-root@localhost:~# ./startVPN.bash 
+root@localhost:~# ./startVPN.sh 
 Docker version 17.03.0-ce, build 3a232c8
 User:<USERNAME>
 Password:<PASSWORD>
