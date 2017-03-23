@@ -1,4 +1,4 @@
-# Express-Docker-VPN-Server
+# Express-Docker-VPN-Server Setup in 3 Minutes
 
 Requires Debian Jessie, or Docker to be installed
 
